@@ -38,4 +38,7 @@ _WS_DataStructure_ Read me!!
 ## 2019-06-02 진행
    1. Bitree(333p, 문제8-2풀어오기 enk:다시짜오기, dhkim:고민&문제해결)
    2. Stack 계산기 진행 완료(~250p)
-   3. 일정: 6/5 (수) 22
+   3. 두문제 풀어오기
+       * (https://leetcode.com/problems/validate-stack-sequences/)
+       * (https://leetcode.com/problems/n-ary-tree-preorder-traversal/)
+   * 일정: 6/5 (수) 22
