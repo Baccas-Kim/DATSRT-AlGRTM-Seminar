@@ -1,0 +1,14 @@
+test.exe : main.o DBLL.o MyUI.o
+	gcc -o test.exe DBLL.o MyUI.o
+
+MyUI.o : MyUI.c
+	gcc -c -o MyUI.o MyUI.c
+
+main.o : main.c
+	gcc -c -o main.o main.c
+
+DBLL.o : DBLL.c
+	gcc -c -o DBLL.o DBLL.c
+
+clean : 
+	rm *.o test.exe
