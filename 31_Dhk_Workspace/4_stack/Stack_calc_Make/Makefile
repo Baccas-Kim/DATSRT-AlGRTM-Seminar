@@ -16,3 +16,14 @@ app.exe: $(OBJS)
 # clean house
 clean:
 	rm -f $(OBJS) $(OUT)
+
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+CLinkedList.o: CLinkedList.c
+	$(CC) -c CLinkedList.c -o CLinkedList.o $(CFLAGS)
+
+CLLBaseStack.o: CLLBaseStack.c
+	$(CC) -c CLLBaseStack.c -o CLLBaseStack.o $(CFLAGS)
+
