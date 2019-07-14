@@ -1,9 +1,9 @@
-OBJS	= CLinkedList.o CLLBaseStack.o main.o
-SOURCE	= CLinkedList.c CLLBaseStack.c main.c
+OBJS	= CLinkedList.o CLLBaseStack.o Main.o
+SOURCE	= CLinkedList.c CLLBaseStack.c Main.c
 HEADER	= CLinkedList.h CLLBaseStack.h
 OUT	= app.exe
 LFLAGS	 = 
-cc = gcc
+#cc = gcc
 
 all: app.exe
 
@@ -17,13 +17,4 @@ app.exe: $(OBJS)
 clean:
 	rm -f $(OBJS) $(OUT)
 
-
-main.o: main.c
-	$(CC) -c main.c -o main.o $(CFLAGS)
-
-CLinkedList.o: CLinkedList.c
-	$(CC) -c CLinkedList.c -o CLinkedList.o $(CFLAGS)
-
-CLLBaseStack.o: CLLBaseStack.c
-	$(CC) -c CLLBaseStack.c -o CLLBaseStack.o $(CFLAGS)
 
