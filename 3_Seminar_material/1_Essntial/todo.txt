@@ -1,0 +1,12 @@
+1. essen todo list
+
+-Big-o
+-recursive
+-arrary
+-pointer
+-함수포인터
+-heap
+
+
+q : 하노이 피보나찌
+포인터
