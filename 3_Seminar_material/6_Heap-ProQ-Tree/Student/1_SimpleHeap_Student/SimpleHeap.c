@@ -15,12 +15,12 @@ int HIsEmpty(Heap * ph)
 
 int GetParentIDX(int idx) 
 { 
-	return idx/2; 
+	return ; 
 }
 
 int GetLChildIDX(int idx) 
 { 
-	return idx*2; 
+	return ; 
 }
 
 int GetRChildIDX(int idx) 
@@ -55,7 +55,7 @@ void HInsert(Heap * ph, HData data, Priority pr)
 	{
 		if(pr < (ph->heapArr[GetParentIDX(idx)].pr))
 		{
-			ph->heapArr[idx] = ph->heapArr[GetParentIDX(idx)];
+			ph->heapArr[idx] = 
 			idx = GetParentIDX(idx);
 		}
 		else
@@ -69,17 +69,17 @@ void HInsert(Heap * ph, HData data, Priority pr)
 HData HDelete(Heap * ph)
 {
 	HData retData = (ph->heapArr[1]).data;    // 삭제할 데이터 임시 저장
-	HeapElem lastElem = ph->heapArr[ph->numOfData];
+	HeapElem lastElem = 
 
 	int parentIdx = 1;    // 루트 노드의 Index
 	int childIdx;
 
 	while(childIdx = GetHiPriChildIDX(ph, parentIdx))
 	{
-		if(lastElem.pr <= ph->heapArr[childIdx].pr)
+		if(lastElem.pr <= 
 			break;
 
-		ph->heapArr[parentIdx] = ph->heapArr[childIdx];
+		ph->heapArr[parentIdx] = 
 		parentIdx = childIdx;
 	}
 
