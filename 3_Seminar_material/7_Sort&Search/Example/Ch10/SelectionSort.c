@@ -8,15 +8,15 @@ void SelSort(int arr[], int n)
 
 	for(i=0; i<n-1; i++)
 	{
-		maxIdx = i;    // Á¤·Ä ¼ø¼­»ó °¡Àå ¾Õ¼­´Â µ¥ÀÌÅÍÀÇ index
+		maxIdx = i;    // ì •ë ¬ ìˆœì„œìƒ ê°€ìž¥ ì•žì„œëŠ” ë°ì´í„°ì˜ index
 
-		for(j=i+1; j<n; j++)   // ÃÖ¼Ò°ª Å½»ö
+		for(j=i+1; j<n; j++)   // ìµœì†Œê°’ íƒìƒ‰
 		{
 			if(arr[j] < arr[maxIdx])
 				maxIdx = j;
 		}
 
-		/* ±³È¯ */
+		/* êµí™˜ */
 		temp = arr[i];
 		arr[i] = arr[maxIdx];
 		arr[maxIdx] = temp;
