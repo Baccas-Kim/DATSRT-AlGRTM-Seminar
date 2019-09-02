@@ -4,7 +4,7 @@ _WS_DataStructure_ Read me!!
 
 
 # 0.시작하기 전
- ## 방향성에 대하여
+ ## 로드맵
  ```
  1. 열혈 자료구조 (윤성우 님 저서)
  2. 뇌를 자극하는 알고리즘 (박상현 님 저서)
@@ -14,9 +14,8 @@ _WS_DataStructure_ Read me!!
  ```
  ## 개발환경 셋팅 
  - OS에 영향을 받지않기 위해서 : GCC(컴파일러) + VSCode(Editor) + Cmake(유틸리티)
- - Eunk : Mac, Windows
- - DHKim : Mac, Linux
- 
+ - 에디터 : VS Code + 컴파일러 : GCC  (Linux Ubuntu 16/Windows10/Mac mojave)or else 사용가능
+ - 
  
  
  * note : 알고리즘 교재의 경우 "C로 구현한 알고리즘 - Kyle Loudon 저 / 허욱 역" 교재 또한 고려중임 (단종됨)
