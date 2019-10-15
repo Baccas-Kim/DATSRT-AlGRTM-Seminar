@@ -84,3 +84,18 @@ _WS_DataStructure_ Read me!!
 
 [3차시 ]
   - 목표 : 10월 30일까지 끝내기 1회독!!!
+
+
+ * ===========================================================================================
+ - 참고 : https://www.edwith.org/cs50 - 하바드 컴교양강좌
+ - 참고 : http://panthema.net/2013/sound-of-sorting/ - 정렬알고리즘 시청각화
+  - 다음 공부 : 
+    - https://slack-redir.net/link?url=http%3A%2F%2Fwww.yes24.com%2F24%2FUsedShop%2FGoods%2F3524901
+    - https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=4563781&start=pnoranbook&partnerPop=noranbook
+  - 개발환경
+    - http://www.mingw.org/
+    - https://cmake.org/
+    - http://solver.assistedcoding.eu/makefilegen - 메이크파일 만드는 사이트
+    - 중요한건 : C:\MinGW\msys\1.0\bin 을 꼭 환경변수 추가하기 ( 메뉴얼 : https://blog.rovitek.com/35)
+   
+  
