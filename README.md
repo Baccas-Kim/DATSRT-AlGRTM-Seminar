@@ -96,6 +96,6 @@ _WS_DataStructure_ Read me!!
     - http://www.mingw.org/
     - https://cmake.org/
     - http://solver.assistedcoding.eu/makefilegen - 메이크파일 만드는 사이트
-  - 
-  - 
+    - 중요한건 : C:\MinGW\msys\1.0\bin 을 꼭 환경변수 추가하기 ( 메뉴얼 : https://blog.rovitek.com/35)
+   
   
