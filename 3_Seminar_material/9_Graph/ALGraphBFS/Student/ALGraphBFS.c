@@ -1,16 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "ALGraphDFS.h"
+#include "ALGraphBFS.h"
 #include "DLinkedList.h"
-#include "ArrayBaseStack.h"
+#include "CircularQueue.h"
 
 int WhoIsPrecede(int data1, int data2);
 
 // 그래프의 초기화
 void GraphInit(ALGraph * pg, int nv)
 {
-	int i;	
+	int i;
 
 	pg->adjList = (List*)malloc(sizeof(List)*nv);
 	pg->numV = nv;
@@ -53,7 +53,7 @@ void ShowGraphEdgeInfo(ALGraph * pg)
 
 	for(i=0; i<pg->numV; i++)
 	{
-		printf("%c와 연결된 정점: ", i + 65);
+		printf("%c between connected Vertex: ", i + 65);
 		
 		if(LFirst(&(pg->adjList[i]), &vx))
 		{
@@ -80,57 +80,41 @@ int VisitVertex(ALGraph * pg, int visitV)
 	if(pg->visitInfo[visitV] == 0)
 	{
 		pg->visitInfo[visitV] = 1;
-		printf("%c ", visitV + 65);     // 방문 정점 출력
+		printf("%c ", visitV + 65);    // 방문 정점 출력
 		return TRUE;
 	}
 	
 	return FALSE;
 }
 
-// Depth First Search: 정점의 정보 출력
-void DFShowGraphVertex(ALGraph * pg, int startV)
+// Breadth First Search: 정점의 정보 출력
+void BFShowGraphVertex(ALGraph * pg, int startV)
 {
-	Stack stack;
+	Queue queue;
 	int visitV = startV;
 	int nextV;
 
-	// DFS를 위한 스택의 초기화
-	StackInit(&stack);
+	// DFS를 위한 큐의 초기화
+	QueueInit(&queue);
 
-	VisitVertex(pg, visitV);    // 시작 정점 방문
-	SPush(&stack, visitV);
+	// 시작 정점 탐색
+	VisitVertex(pg, visitV);
 
 	while(LFirst(&(pg->adjList[visitV]), &nextV) == TRUE)
 	{
-		int visitFlag = FALSE;
-
 		if(VisitVertex(pg, nextV) == TRUE)
+			Enqueue(&queue, nextV);
+
+		while(LNext(&(pg->adjList[visitV]), &nextV) == TRUE)
 		{
-			SPush(&stack, visitV);
-			visitV = nextV;
-			visitFlag = TRUE;
+			if(VisitVertex(pg, nextV) == TRUE)
+				Enqueue(&queue, nextV);
 		}
+
+		if(QIsEmpty(&queue) == TRUE)    // 큐가 비면 BFS 종료
+			break;
 		else
-		{
-			while(LNext(&(pg->adjList[visitV]), &nextV) == TRUE)
-			{
-				if(VisitVertex(pg, nextV) == TRUE)
-				{
-					SPush(&stack, visitV);
-					visitV = nextV;
-					visitFlag = TRUE;
-					break;
-				}
-			}
-		}
-		
-		if(visitFlag == FALSE)
-		{
-			if(SIsEmpty(&stack) == TRUE)    // 스택이 비면 DFS종료
-				break;
-			else
-				visitV = SPop(&stack);	
-		}
+			visitV = Dequeue(&queue);	
 	}
 
 	// 탐색 정보 초기화
