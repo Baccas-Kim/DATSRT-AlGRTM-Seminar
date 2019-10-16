@@ -16,5 +16,6 @@ int main(void)
 	ShowGraphEdgeInfo(&graph);
 
 	GraphDestroy(&graph);
+	getchar();
 	return 0;
 }
