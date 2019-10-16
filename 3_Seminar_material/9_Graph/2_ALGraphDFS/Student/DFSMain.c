@@ -22,5 +22,6 @@ int main(void)
 	DFShowGraphVertex(&graph, G); printf("\n");
 
 	GraphDestroy(&graph);
+	getchar();
 	return 0;
 }

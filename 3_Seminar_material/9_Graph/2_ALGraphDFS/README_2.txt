@@ -7,13 +7,18 @@ Question5. 주석달기 - ShowGraphEdgeInfo() 함수 완성하기
 
 ==============================================================
 정답시 출력 
-A between connected Vertex: B D E
-B between connected Vertex: A C
+
 C between connected Vertex: B D
 D between connected Vertex: A C E
-E between connected Vertex: A D
+E between connected Vertex: D F G
+F between connected Vertex: E
+G between connected Vertex: E
+A B C D E F G
+C B A D E F G
+E D A B C F G
+G E D A B C F
 
-* a.exe 참고
+* a.exe 파일 실행
 
 
 ==============================================================
