@@ -106,29 +106,32 @@ int VisitVertex(ALGraph * pg, int visitV)
 // Depth First Search: 정점의 정보 출력
 void DFShowGraphVertex(ALGraph * pg, int startV)
 {
+
+	//초기화 부분
 	Stack stack;
 	int visitV = startV;
 	int nextV;
+	StackInit(&stack);		 	// DFS를 위한 스택의 초기화
 
-	// DFS를 위한 스택의 초기화
-	StackInit(&stack);
+	//그래프의 시작지점 방문
+	VisitVertex(pg, visitV);	// 시작 정점 방문
+	SPush(&stack, visitV);		// 
 
-	VisitVertex(pg, visitV);    // 시작 정점 방문
-	SPush(&stack, visitV);
-
+	// while(LFirst(&(pg->adjList[visitV]), &nextV) == TRUE) - 코드의 의미 : 모든 정점의 방문이 이루어진다
 	while(LFirst(&(pg->adjList[visitV]), &nextV) == TRUE)
 	{
 		int visitFlag = FALSE;
-
-		if(VisitVertex(pg, nextV) == TRUE)
-		{
-			SPush(&stack, visitV);
-			visitV = nextV;
-			visitFlag = TRUE;
+		//next V에 담긴 정점의 정보를 가지고 방문을 시도한다
+		if(VisitVertex(pg, nextV) == /*/Q1 TRUE or FALSE/*/)
+		{//nextV의 방문에 성공한 경우
+			
+			SPush(/*/Q2/*/); 	//visitV의 정보는 스텍에 PUSH
+			visitV = nextV;			//
+			visitFlag = TRUE;		//
 		}
 		else
-		{
-			while(LNext(&(pg->adjList[visitV]), &nextV) == TRUE)
+		{//nextV의 방문에 실패한 경우
+			while(LNext(&(pg->adjList[visitV]), &nextV) == TRUE)//vistV에 연결된 정점을 찾을때까지 반복
 			{
 				if(VisitVertex(pg, nextV) == TRUE)
 				{
