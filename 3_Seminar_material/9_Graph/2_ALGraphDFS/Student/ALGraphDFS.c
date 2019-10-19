@@ -118,26 +118,26 @@ void DFShowGraphVertex(ALGraph * pg, int startV)
 	SPush(&stack, visitV);		// 
 
 	// while(LFirst(&(pg->adjList[visitV]), &nextV) == TRUE) - 코드의 의미 : 모든 정점의 방문이 이루어진다
-	while(LFirst(&(pg->adjList[visitV]), &nextV) == TRUE)
+	while(LFirst(&(pg->adjList[visitV]), &nextV) == /*/Q1 TRUE or FALSE/*/)
 	{
 		int visitFlag = FALSE;
 		//next V에 담긴 정점의 정보를 가지고 방문을 시도한다
-		if(VisitVertex(pg, nextV) == /*/Q1 TRUE or FALSE/*/)
+		if(VisitVertex(pg, nextV) == /*/Q2/*/)
 		{//nextV의 방문에 성공한 경우
 			
 			SPush(/*/Q2/*/); 	//visitV의 정보는 스텍에 PUSH
-			visitV = nextV;			//
-			visitFlag = TRUE;		//
+			visitV = /*/Q2/*/;			//
+			visitFlag = /*/Q2/*/;		//
 		}
 		else
 		{//nextV의 방문에 실패한 경우
 			while(LNext(&(pg->adjList[visitV]), &nextV) == TRUE)//vistV에 연결된 정점을 찾을때까지 반복
 			{
-				if(VisitVertex(pg, nextV) == TRUE)
+				if(VisitVertex(pg, nextV) == /*/Q3/*/)
 				{
-					SPush(&stack, visitV);
-					visitV = nextV;
-					visitFlag = TRUE;
+					SPush(/*/Q3/*/);//스텍에 Push
+					visitV = /*/Q3/*/
+					visitFlag = /*/Q3/*/;
 					break;
 				}
 			}

@@ -98,4 +98,64 @@ _WS_DataStructure_ Read me!!
     - http://solver.assistedcoding.eu/makefilegen - 메이크파일 만드는 사이트
     - 중요한건 : C:\MinGW\msys\1.0\bin 을 꼭 환경변수 추가하기 ( 메뉴얼 : https://blog.rovitek.com/35)
    
+ * ========================================================================================
+ * ========================================================================================
+    할일 : "ALGraph.c" 파일 완성하기
+    Question1. 코드완성 - GraphInit() 함수속 동적할당의 크기를 결정하기
+    Question2. 코드완성 - GraphDestroy() 함수 구현하기
+    Question3. 코드완성 - GraphDestroy() 함수 속 free 함수 완성하기
+    Question4. 주석달기 - 2Line에 걸처 LInsert() 함수가 호출되는 의미를 그래프 자료구조와 연결시켜 설명하기
+    Question5. 주석달기 - ShowGraphEdgeInfo() 함수 완성하기
+
+    ==============================================================
+    정답시 출력 
+    A between connected Vertex: B D E
+    B between connected Vertex: A C
+    C between connected Vertex: B D
+    D between connected Vertex: A C E
+    E between connected Vertex: A D
+
+    * a.exe 참고
+
+
+    ==============================================================
+    참고 - 터미널 명령어 
+    빌드 : $make all
+    정리 : $make clean
+    실행 : a.exe (a.exe파일 실행)
+
+
   
+
+ * ========================================================================================
+ * ========================================================================================
+  * 과제 2
+    할일 : "DFShowGraphVertex(ALGraph * pg, int startV)" 함수 완성하기
+    Question1. 참거짓판단(TRUE or FALSE) - LFirst(&(pg->adjList[visitV]), &nextV) 리턴값으로 알맞은 것은?
+    Question2. 코드완성 
+      - if(VisitVertex(pg, nextV) == /*/Q1 TRUE or FALSE/*/)//nextV의 방문에 성공한 경우
+      - SPush(/*/Q2/*/); //visitV의 정보는 스텍에 PUSH 
+    Question3. 코드완성 
+
+    ==============================================================
+    정답시 출력 
+
+    C between connected Vertex: B D
+    D between connected Vertex: A C E
+    E between connected Vertex: D F G
+    F between connected Vertex: E
+    G between connected Vertex: E
+    A B C D E F G
+    C B A D E F G
+    E D A B C F G
+    G E D A B C F
+
+    * a.exe 파일 실행
+
+
+    ==============================================================
+    참고 - 터미널 명령어 
+    빌드 : $make all
+    정리 : $make clean
+    실행 : a.exe (a.exe파일 실행)
+

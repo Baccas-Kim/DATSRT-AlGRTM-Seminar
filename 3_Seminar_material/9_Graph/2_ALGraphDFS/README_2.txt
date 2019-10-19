@@ -1,9 +1,9 @@
-할일 : "ALGraph.c" 파일 완성하기
-Question1. 코드완성 - GraphInit() 함수속 동적할당의 크기를 결정하기
-Question2. 코드완성 - GraphDestroy() 함수 구현하기
-Question3. 코드완성 - GraphDestroy() 함수 속 free 함수 완성하기
-Question4. 주석달기 - 2Line에 걸처 LInsert() 함수가 호출되는 의미를 그래프 자료구조와 연결시켜 설명하기
-Question5. 주석달기 - ShowGraphEdgeInfo() 함수 완성하기
+할일 : "DFShowGraphVertex(ALGraph * pg, int startV)" 함수 완성하기
+Question1. 참거짓판단(TRUE or FALSE) - LFirst(&(pg->adjList[visitV]), &nextV) 리턴값으로 알맞은 것은?
+Question2. 코드완성 
+	- if(VisitVertex(pg, nextV) == /*/Q1 TRUE or FALSE/*/)//nextV의 방문에 성공한 경우
+	- SPush(/*/Q2/*/); //visitV의 정보는 스텍에 PUSH 
+Question3. 코드완성 
 
 ==============================================================
 정답시 출력 
