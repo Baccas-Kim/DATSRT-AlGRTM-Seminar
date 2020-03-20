@@ -1,7 +1,7 @@
 # _WS_DataStructure_
 _WS_DataStructure_ Read me!!
  - 자료구조와 알고리즘 
- - 
+ - 슬랙 초대 요청 :: 
 
 # 0.시작하기 전
  ## 로드맵
